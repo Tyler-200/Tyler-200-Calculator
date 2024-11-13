@@ -1,3 +1,55 @@
 /* Stylesheet fpr calculator application
    Author: Tyler Hughes  
 */ 
+body{
+   margin: 0;
+   display: flex;
+   justify-content: center;
+   background-color: hsl(0, 0%, 80%);
+}
+#calc{
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   background-color: rgb(56, 56, 56);
+   border-radius: 10px;
+   max-width: 500px;
+   overflow: hidden;
+}
+
+#screen{
+   width: 100%;
+   padding: 15px;
+   font-size: 5rem;
+   border: none;
+   background-color: rgb(87, 87, 87);
+   color: white;
+   text-align: left;
+}
+#keys{
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 10px;
+   padding: 25px;
+}
+button{
+   width: 100px;
+   height: 100px;
+   border-radius: 10px;
+   border: none;
+   background-color: rgb(61, 91, 226);
+   color: black;
+   font-size: 3rem;
+   font-weight: bold;
+   cursor: pointer;
+}
+button:hover{
+   background-color: hsl(0, 0%, 50%);
+}
+button:active{
+   background-color: hsl(0, 0%, 40%);
+}
+.operator{
+   background-color: rgb(185, 147, 41);
+}
+.equals{
+   background-color: rgb(124, 4, 4);
+}
