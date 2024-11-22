@@ -44,7 +44,7 @@ body{
 button{
    width: 100px;
    height: 100px;
-   border-radius: 10px;
+   border-radius: 50px;
    border: none;
    background-color: rgb(61, 91, 226);
    color: black;
@@ -62,5 +62,5 @@ button:active{
    background-color: rgb(185, 147, 41);
 }
 .equals{
-   background-color: rgb(124, 4, 4);
+   background-color: rgb(216, 5, 5);
 }
