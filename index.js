@@ -2,27 +2,37 @@
  *  Author: Tyler Hughes
  */
 
-const screen = document.getElementById("screen");
+const inputScreen = document.getElementById("InputScreen");
+const calculationScreen = document.getElementById("CalculationScreen");
 
 /**
  *   appends value to screen
- *   @param input - a string value of for a numeric operator or integer to be appended 
+ *   @param input - a string value of for an integer to be appended to the calculator screen
  */ 
 function addToScreen(input){
-    screen.value += input;
+    inputScreen.value += input;
+}
+
+function addOperator(input){
+    calculationScreen.value += inputScreen.value;
+    calculationScreen.value += input;
+    inputScreen.value="";
 }
 
 // clears all values from screen
 function clearValues(){
-    screen.value="";
+    inputScreen.value="";
+    calculationScreen.value="";
 }
 
 // evaluates code and displays the result
 function evaluateSum(){
+    calculationScreen.value += inputScreen.value;
+    inputScreen.value="";
     try{
-        screen.value = eval(screen.value);
+        inputScreen.value = eval(calculationScreen.value);
     } 
     catch(err){
-        screen.value = "Error";
+        inputScreen.value = "Error";
     }
 }
